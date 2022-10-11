@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 40px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+}
+
+label,
+span {
+    display: block;
+}
+
+div.button {
+    width: 80%;
+    height: 30px;
+    margin: 30px auto 0;
+    text-align: right;
+}
+
+.button button {
+    background-color: green;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+/* =============== form =============== */
+
+:root {
+    --color-span: red;
+}
+
+.form {
+    display: grid;
+    margin-top: 30px;
+    padding-left: 14px;
+}
+
+.form span {
+    font-size: 12px;
+}
+
+.form input {
+    width: 40%;
+    height: 45px;
+    padding-inline-start: 8px;
+    font-size: 11px;
+}
+
+.form input[type=submit] {
+    margin-top: 20px;
+    width: 90px !important;
+    height: 30px;
+    background-color: green;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding-inline-start: 0;
+}
+
+label span {
+    display: inline-block;
+    color: rgb(119, 109, 109) !important;
+}
+
+
+div.nome span {
+    color: var(--color-span);
+}
+
+div.nome,
+div.dataNascimento {
+    margin-bottom: 20px;
+}
+
+div.dataNascimento span {
+    color: var(--color-span);
+}
+
+@media screen and (max-width: 768px) {
+    .form input {
+        width: 60%;
+    }
+}
+
+/*  ========= modal ============ */
+.modal {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 5;
+    opacity: .955
+}
+
+.modal>button {
+    float: right;
+    right: 0;
+    padding: 4px;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 700;
+    background-color: green;
+    cursor: pointer
+}
+
+.modal form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: 206px;
+    padding-top: 16px;
+    display: grid;
+    grid-template-rows: 75px 75px 34px;
+    justify-items: center;
+    align-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000
+}
+
+.modal form>div {
+    width: 90%
+}
+
+.modal input {
+    outline: 0;
+    border: none;
+    width: 100%;
+    height: 45px;
+    padding-inline-start: 8px;
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: rgba(104, 104, 120, .101)
+}
+
+.modal input[type=submit] {
+    width: 60px;
+    height: 30px;
+    background-color: green;
+    color: #fff;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding-inline-start: 0
+}
+
+@media (max-width:900px) {
+    .modal form {
+        width: 50%;
+        height: 202px
+    }
+}
+
+/*  ======== table =========== */
+table,
+td {
+    border: 1px solid #EB9826;
+    margin: 0
+}
+
+table#people {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 8px
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eb99262d
+}
+
+tbody tr:hover {
+    background-color: #EB9826;
+    color: #f2f2f2
+}
+
+tbody tr {
+    height: 35px
+}
+
+tbody button {
+    background-color: green;
+    color: #fff;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 42px;
+    height: 25px;
+    border-radius: 8px
+}
+
+.select {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35px
+}
+
+.select label {
+    width: 42px
+}

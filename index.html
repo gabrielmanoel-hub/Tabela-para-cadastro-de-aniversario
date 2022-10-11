@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="App para cadastro de nomes para verificar aniversário">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="./js/script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Meus Aniversários</h1>
+    </header>
+    <main>
+        <form id="form" class="form">
+            <div class="nome">
+                <label for="nome">Nome da pessoa (<span>campo obrigatório</span>)</label>
+                <input id="nome" type="text"
+                    placeholder="Digite o nome da pessoa aqui, por exemplo Pedro Miguel ou Pedro M">
+                <span id="erroNome"></span>
+            </div>
+            <div class="dataNascimento">
+                <label for="dataNascimento">Data de nascimento (<span>campo obrigatório</span>)</label>
+                <input id="dataNascimento" type="text" placeholder="Data de nascimento exemplo 28/01/2022">
+                <span id="erroNascimento"></span>
+            </div>
+            <input type="submit" value="Salvar">
+        </form>
+        <div class="button">
+            <button id="excluir">Excluir</button>
+        </div>
+        <table id="people">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th class="select">
+                        <label for="selectTodos">Acões</label>
+                        <input type="checkbox" id="selectTodos">
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="container"></tbody>
+        </table>
+        <div class="modal">
+            <button id="close">close</button>
+            <div>
+                <form action="" id="formModal">
+                    <div>
+                        <label></label>
+                        <input id="ModalNome" type="text" placeholder="Nome">
+                        <span id="erroName"></span>
+                    </div>
+                    <div>
+                        <input id="ModaldataNascimento" type="text" placeholder="Data de nascimento">
+                        <span id="erroDataDeNascimento"></span>
+                    </div>
+                    <input type="submit" value="Salvar">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
